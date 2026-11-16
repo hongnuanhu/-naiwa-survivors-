@@ -1,0 +1,131 @@
+{
+  "reference": "https://h5.metaapp.cn/online/h5/BUsvkkbBiAq2pF2Ttx4j/1.0.2/6/index.html",
+  "assets": [
+    {
+      "file": "public/assets/bomber.webp",
+      "bytes": 49670,
+      "sha256": "1257e4a3e849f890c11cad5e67549b3f6ca0859f52dc4a6680e0633743c6799e",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/boss.webp",
+      "bytes": 66922,
+      "sha256": "8d8e211058a0cce6c18c64629ad9afe9ef98443def40fa10a6b4f6a3a9421eac",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/captain.webp",
+      "bytes": 55520,
+      "sha256": "f2191803c14d4f6540ad601719f9795bf59fdd7ad953cde010a1cee80dbdd205",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/chaser.webp",
+      "bytes": 52360,
+      "sha256": "d70f52e540603bcbb6ab6fc3575379a2bf93f980403ed10959deb9fe2b266d62",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/courtyard.webp",
+      "bytes": 146778,
+      "sha256": "394b10cb4cc679364e52917a5f7e8d53bbdf3a0401e3bbf5db82b56b269b3920",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/hammer.webp",
+      "bytes": 64112,
+      "sha256": "fd23864b43f2f02dbc9beb15798b1be4a8e011c67299d1aa30501de083cea423",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/hero-idle.webp",
+      "bytes": 32422,
+      "sha256": "d0ab30eca489e7c11dd96bb760c3ea21296cfb1190c1859839c57e4db0dcdac2",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/hero-run.webp",
+      "bytes": 50326,
+      "sha256": "9f3b0d0d2fa5c99259d9fa2178c4acca5fd97a06beb11fa2b4c08791cd851891",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/hero.webp",
+      "bytes": 6650,
+      "sha256": "e992d57524cf0cad0b131b04933c3f946fde506f2467b2550d6aa23757b4e30d",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/meituan.png",
+      "bytes": 894878,
+      "sha256": "7e36cea172573fcab7bef05660f1ac9349d4bb4a18cebf8ac32dea6a0a0913ca",
+      "source": "参考图片经 image_gen 生成；参考形象授权未确认"
+    },
+    {
+      "file": "public/assets/naidan-call.webp",
+      "bytes": 22112,
+      "sha256": "2d8b4ab6190ddb0a9f2d3ec0f6873c67eb55999804f09e99096167044a9faf20",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/naidan-idle.webp",
+      "bytes": 20662,
+      "sha256": "73fcd0b0d1d040e2753c52c94e3a46635dcf55c644874e19aa6a2dfb2bcc64af",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/naidan-laugh.webp",
+      "bytes": 22818,
+      "sha256": "9261b328699ed580374ad945bea06bfab77f84371d2c57b8c64cf9d299ea855d",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/normal-theme.mp3",
+      "bytes": 870438,
+      "sha256": "0724ff890f6a38ca08ec7ad6c463008f3820219ad277cfae60f845ecb8db3a40",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/shield.webp",
+      "bytes": 60112,
+      "sha256": "44b6447e15f576137b8c2a0cc73ce50d33e8d65eff11988ac831666955f62e31",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/shooter.webp",
+      "bytes": 46334,
+      "sha256": "c0873a08eea874b33c03bac7081a4b5e2af058380ada1057f980efc215673505",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/story-cover.webp",
+      "bytes": 292970,
+      "sha256": "5ac9749613767e62fbc14fb0ca0afdd9a32c91df84d1212a456f4b37cff5061b",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/throne.webp",
+      "bytes": 151562,
+      "sha256": "af3747f3e5331147eafd872301151867e2fefe26513d1eaa4153ed0863723bfb",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/assets/village.webp",
+      "bytes": 175960,
+      "sha256": "3a925047b1171bd28444feae589aa3e1bc6ac74afd44984afad97480c0f4e314",
+      "source": "参考游戏；再分发许可未确认"
+    },
+    {
+      "file": "public/favicon.svg",
+      "bytes": 458,
+      "sha256": "af92fb500280d15bdf6712a579e7eaf1fc97275599b881d56aee5cf761158b9a",
+      "source": "项目绘制；原创部分许可未指定"
+    },
+    {
+      "file": "public/licenses/phaser.txt",
+      "bytes": 1120,
+      "sha256": "080f3d5539e766bb556df5b8e86c4f5d581ece35c692b80956ca352b84d29134",
+      "source": "Phaser MIT license"
+    }
+  ]
+}
