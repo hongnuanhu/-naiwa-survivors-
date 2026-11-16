@@ -1,5 +1,51 @@
 # 奶蛙幸存者使用教程
 
+按本教程可从下载文件一直操作到开始第一局。**电脑本地运行需要 Node.js；仅用手机时，请访问别人已经部署好的游戏网址，手机不能直接运行源码 ZIP。**
+
+## 先选对下载文件
+
+| 拿到的内容 | 接下来做什么 |
+| --- | --- |
+| [运行包 naiwa-survivors-runtime-0.1.0.zip](https://github.com/s13753540656-sys/-naiwa-survivors-/releases/download/v0.1.0/naiwa-survivors-runtime-0.1.0.zip) | 完整解压，安装 Node.js，执行 node scripts/serve.mjs，不需要 npm 安装 |
+| 仓库 Code → Download ZIP / Git 克隆 / 发布源码包 | 进入含 package.json 的目录，npm ci → npm run dev；仓库默认没有 dist，需要自己构建 |
+| 公网游戏链接 | 在浏览器打开，等待加载后开始；微信真机兼容与网络需具体检查 |
+
+发布下载页：[v0.1.0 Assets](https://github.com/s13753540656-sys/-naiwa-survivors-/releases/tag/v0.1.0)。自动生成的 Source code (zip) 是源码，不是已经构建好的运行包。
+
+## 零基础操作示例（Windows）
+
+1. 安装 [Node.js](https://nodejs.org/en/download)，推荐使用已验证的 24 版本。安装后重新打开终端。
+2. 下载运行包，在资源管理器选择“全部解压”，进入 naiwa-survivors-runtime 文件夹。能看见 dist、scripts 和 README.md 才是正确位置。
+3. 点击资源管理器顶部地址栏，输入 `cmd` 并回车，打开的命令提示符会直接位于当前文件夹。
+4. 输入以下命令，每行输入后按回车：
+
+```sh
+node --version
+node scripts/serve.mjs
+```
+
+第一条应显示版本号；第二条应显示 `奶蛙幸存者：http://127.0.0.1:4173`。不要关闭这个窗口。
+
+5. 打开 Edge 或 Chrome，把 `http://127.0.0.1:4173/` 输入**浏览器地址栏**，不是搜索框或终端。等待开始按钮可用，选择奶蛙和简单难度，点击开始。
+6. 按 WASD 或方向键移动；攻击自动。Esc 暂停后可继续，也可保存返回营地。
+7. 下次想玩，重复在此文件夹执行 `node scripts/serve.mjs`，再打开相同网址，点继续冒险。无需重复下载安装。
+
+macOS / Linux 用户在项目目录打开 Terminal，执行同样的 node / npm 命令；这两个系统尚未实测。无需安装 Git 即可用 ZIP，只有克隆方式需要 Git。
+
+## 如果已经下载的是源码
+
+在解压后的文件夹中找到 package.json（GitHub 文件夹名可能是 -naiwa-survivors--main，发布源码包是 naiwa-survivors-source），在该文件夹打开终端：
+
+```sh
+node --version
+npm ci
+npm run dev
+```
+
+等待安装完成，看到终端显示 Local: http://127.0.0.1:5173/ 后再打开这个地址。npm ci 失败时先处理网络或 Node.js 版本问题，不要直接跳过。Windows 如遇脚本执行策略提示，改为 npm.cmd ci / npm.cmd run dev。
+
+若希望生成可分享的静态游戏文件：停止开发服务后依次执行 npm run build、npm start，访问 http://127.0.0.1:4173/。dist 是构建产物，源码更新后要重新构建。仓库首页的三张真实截图可供核对界面是否正确。
+
 ## 解压与启动
 
 请先完整解压 ZIP，不要在压缩软件内双击 HTML。安装 Node.js 24（要求 ≥22.12）。
@@ -66,6 +112,25 @@
 
 ## 手机与微信
 
+### 用自己的手机连接电脑玩
+
+1. 电脑和手机连接同一个可信 Wi-Fi，电脑保持开机。先停止已有静态服务（Ctrl+C）。
+2. 电脑在运行包目录执行：
+
+```sh
+node scripts/serve.mjs --host 0.0.0.0
+```
+
+3. Windows 在另一个终端运行 `ipconfig`，找到当前 Wi-Fi 网卡的 IPv4 地址，例如 `192.168.1.23`。
+4. 手机浏览器打开 `http://192.168.1.23:4173/`（把示例换成你的电脑 IP）。**0.0.0.0 是服务监听参数，不是手机应打开的网址。** 如防火墙询问，按需允许可信的专用网络访问。
+5. 手机横屏、关闭方向锁定；选角色开始，在战场空白位置按住拖动。电脑服务关掉后，这个局域网链接也会失效。
+
+源码开发服务改用 npm run dev -- --host 0.0.0.0，手机地址端口相应为 5173。
+
+### 发给异地朋友
+
+局域网 IP 只适用于同一网络。异地朋友需要可公开访问的 HTTPS 游戏网址；仅发仓库首页或下载 ZIP 不会自动在微信里开玩。仓库下载运行的方式与在线托管是两条不同使用路径。
+
 同 Wi-Fi：运行包在电脑运行 node scripts/serve.mjs --host 0.0.0.0，手机打开 http://电脑局域网IP:4173/。源码开发用 npm run dev -- --host 0.0.0.0，端口 5173。检查防火墙允许专用网络访问。不要将 localhost / 127.0.0.1 发给朋友作为公网链接。
 
 异地分享需要部署 HTTPS 静态站点，上传 dist 的全部内容至域名根目录。当前 /assets/ 资源路径不能直接用于 /仓库名/ 子路径。微信访问、国内网络、软键盘和音频恢复仍需安卓与 iPhone 真机测试。
@@ -85,4 +150,8 @@
 | 存档消失 | 检查浏览器、地址与端口，是否清数据或开了无痕；无服务器备份 |
 | 发热卡顿 | 可关震屏、伤害数字并减少后台应用；未完成真机长期性能测试 |
 | QA 浏览器起不来 | 脚本默认要求已安装 Microsoft Edge；其他平台需安装 Edge 或自行调整 Playwright channel。普通玩家无需运行 QA |
+| Cannot find module / 找不到 scripts/serve.mjs | 请先完整解压并进入正确目录；运行包的当前目录应同时有 scripts 与 dist。不要在 ZIP 内或上一级下载文件夹执行命令 |
+| npm 报找不到 package.json | 终端不在源码项目目录，进入含 package.json 的文件夹重新执行；运行包则直接用 node scripts/serve.mjs |
+| 手机输入 0.0.0.0 不能访问 | 这是电脑监听地址，手机应使用电脑局域网 IPv4 地址，如 http://192.168.1.23:4173/ |
+| 只想玩却下载了 Source code (zip) | 按源码步骤安装和启动，或改下载 Release 中名为 runtime 的运行 ZIP |
 | 能直接公开全部素材吗 | 目前没有齐备的再分发授权，须授权或替换；公开可访问不等于授权，详见 ASSETS.md |
