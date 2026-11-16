@@ -2,6 +2,46 @@
 
 支持手机触屏与电脑键盘的十二波单机生存游戏。选择奶蛙、美团鼠或奶蛋，移动躲避敌人，以自动攻击的武器收集奶币、强化角色并搭配装备。
 
+## 第一次拿到仓库？从这里开始
+
+**只想玩：下载运行包。想修改游戏：下载或克隆源码。两条路线任选一条即可。** 不需要 GitHub 登录、API Key 或服务器账号来运行本地游戏。
+
+### 路线 A：下载运行包，直接玩（推荐普通玩家）
+
+1. 先安装 [Node.js](https://nodejs.org/en/download)（本项目已验证 Node.js 24）。安装后重新打开终端，输入 `node --version`，能看到版本号即安装成功。
+2. 打开 **[v0.1.0 下载页面](https://github.com/s13753540656-sys/-naiwa-survivors-/releases/tag/v0.1.0)**，展开 **Assets**，下载 **[naiwa-survivors-runtime-0.1.0.zip](https://github.com/s13753540656-sys/-naiwa-survivors-/releases/download/v0.1.0/naiwa-survivors-runtime-0.1.0.zip)**。不要把自动生成的 `Source code (zip)` 当作已构建运行包。
+3. 完整解压，进入 `naiwa-survivors-runtime`，确认其中同时有 `dist` 和 `scripts` 文件夹。
+4. 在这个文件夹打开终端（Windows 可在资源管理器地址栏输入 `cmd` 后回车），运行：
+
+```sh
+node scripts/serve.mjs
+```
+
+5. 在电脑浏览器打开 **http://127.0.0.1:4173/**。等待加载完成，选角色 → 选简单难度 → 点击开始。保持终端开启；关闭游戏服务用 `Ctrl+C`。
+
+运行包不需要 `npm ci`，也不需要自己构建。不要直接双击 `dist/index.html`。
+
+### 路线 B：已经拿到仓库源码
+
+从仓库绿色 **Code → Download ZIP** 下载并完整解压，或用 Git 克隆。进入**含有 `package.json` 的项目文件夹**；GitHub 自动解压目录的名称可能带有 `-main`，不必与发布源码包的文件夹名相同。
+
+安装 Node.js 后，在这个项目文件夹打开终端，依次运行：
+
+```sh
+npm ci
+npm run dev
+```
+
+打开 **http://127.0.0.1:5173/**，选择角色和难度开始。第一次安装依赖需要网络，等 `npm ci` 成功后再执行下一条。Windows 提示 `npm.ps1` 无法执行时，用 `npm.cmd ci` 和 `npm.cmd run dev`。
+
+源码仓库不带 `dist/`。若要使用 `npm start`，先执行 `npm run build`，再执行 `npm start`，打开 4173 地址。玩游戏不必先跑测试。
+
+### 开局后怎么操作？
+
+电脑用 **WASD / 方向键移动、Esc 暂停**；手机横屏，在战场空白处**按住拖动控制方向，松手停止**。攻击全自动。普通波撑到倒计时结束即可；第十二波撑完或击败魔王获胜，生命归零失败。波间选强化、购买装备，再点击下一波。失败或通关后点 **“重新开局”**；每局可输入 **`szx牛逼`** 复活一次。
+
+**手机访问、存档、商店与报错处理，请看 [完整使用教程](docs/USER_GUIDE.md)。** 本地地址只在运行服务的电脑上直接可用，手机和朋友不能把它当作公网链接。
+
 项目无需账号、数据库或 API 密钥。**当前原创代码未指定开源许可证；部分图片和音乐的再分发授权未确认。公开仓库或分发前需确认授权或替换素材。** 详见 [许可状态](LICENSE.md) 和 [素材来源](docs/ASSETS.md)。
 
 ## 真实截图
@@ -14,7 +54,7 @@
 
 ## 运行
 
-推荐 Node.js 24 LTS（要求 ≥22.12）和随附 npm。解压源码 ZIP 后，进入含 package.json 的 naiwa-survivors-source 文件夹：
+推荐 Node.js 24（已验证版本；要求 ≥22.12）和随附 npm。解压或克隆源码后，进入包含 package.json 的项目文件夹：
 
 ```sh
 npm ci
@@ -124,4 +164,4 @@ Windows 执行 npm run release 可重新构建并打包，输出至 releases/。
 
 建议仓库名 naiwa-survivors；描述：“支持手机触屏与电脑键盘的十二波自动攻击生存游戏，使用 TypeScript、Phaser 和 Vite。”
 
-见 [上传准备说明](docs/GITHUB.md)。源码包不含 Git 历史，适合在独立目录初始化仓库。本次仅本地整理，上传前需要确认目标仓库完整地址与公开 / 私有状态。
+本项目仓库：[s13753540656-sys/-naiwa-survivors-](https://github.com/s13753540656-sys/-naiwa-survivors-)；下载包见 [v0.1.0](https://github.com/s13753540656-sys/-naiwa-survivors-/releases/tag/v0.1.0)。自行创建其他仓库时，可参考 [上传准备说明](docs/GITHUB.md)，不要带入个人凭据或不相关的 Git 历史。
