@@ -5,6 +5,7 @@ playwright-report/
 artifacts/
 .release-stage/
 .release-check/
+FILE-MANIFEST.json
 releases/
 coverage/
 .vite/
